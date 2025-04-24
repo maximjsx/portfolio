@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import config from "/CONFIG.json";
 import { useRef, useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
+
 const TimelineItem = ({ experience, animationDelay, isInView }) => {
   const isLeft = experience.side === "left";
 
@@ -35,20 +36,21 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
       >
         <div
           className="
-            bg-black/40 backdrop-blur-[2px] p-4 md:p-6 rounded-lg shadow-md border border-primary/10
-            hover:shadow-xl transition-shadow duration-300
+            bg-white/90 backdrop-blur-[2px] p-4 md:p-6 rounded-[24px] shadow-md 
+            border-2 border-[#F48FB1] hover:shadow-xl transition-shadow duration-300
+            hover:shadow-[#FF80AB]/20 kawaii-float
           "
         >
-          <h3 className="c-cursor-text text-lg md:text-xl font-bold mb-2">
+          <h3 className="c-cursor-text text-lg md:text-xl font-bold mb-2 text-[#F06292]">
             {experience.title}
           </h3>
-          <h4 className="c-cursor-text text-base md:text-lg text-gray-300 mb-2">
+          <h4 className="c-cursor-text text-base md:text-lg text-[#F48FB1] mb-2">
             {experience.company}
           </h4>
-          <p className="c-cursor-text text-sm text-gray-400 mb-3">
+          <p className="c-cursor-text text-sm text-[#EC407A] mb-3">
             {experience.date}
           </p>
-          <p className="c-cursor-text text-gray-500">
+          <p className="c-cursor-text text-[#FF80AB]/80">
             {experience.description}
           </p>
         </div>
@@ -64,8 +66,8 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
               }
             : {}
         }
-        style={{ boxShadow: "0 0 20px var(--secondary)" }}
-        className={`absolute z-0 h-1 bg-white/50 hidden md:block ${
+        style={{ boxShadow: "0 0 20px #FF80AB" }}
+        className={`absolute z-0 h-1 bg-[#F48FB1] hidden md:block ${
           !isLeft ? "left-1/2" : "right-1/2"
         }`}
       />
@@ -80,12 +82,12 @@ const TimelineItem = ({ experience, animationDelay, isInView }) => {
               }
             : {}
         }
-        className="absolute z-10 w-4 h-4 bg-white rounded-full hidden md:block"
+        className="absolute z-10 w-4 h-4 bg-[#F06292] rounded-full hidden md:block"
         style={{
           left: "50%",
           top: "50%",
           transform: "translate(-50%, -50%)",
-          boxShadow: "0 0 40px var(--secondary)",
+          boxShadow: "0 0 40px #FF80AB",
         }}
       />
     </div>
@@ -123,7 +125,7 @@ const Timeline = () => {
       <TypeAnimation
         sequence={[100, config.pages.home.experience.title]}
         wrapper="p"
-        className="text-3xl c-cursor-text font-bold text-center mb-20"
+        className="text-3xl c-cursor-text glow font-bold text-center mb-20 text-[#F06292]"
         cursor={false}
         speed={1}
       />
@@ -137,12 +139,12 @@ const Timeline = () => {
             }}
             className="
               absolute left-1/2 transform -translate-x-1/2 w-1 
-              rounded-full bg-white hidden md:block
+              rounded-full bg-[#FF80AB] hidden md:block
             "
             style={{
               height: "calc(100% + 6.25rem)",
               top: "-3.125rem",
-              boxShadow: "0 0 20px var(--secondary)",
+              boxShadow: "0 0 20px #F48FB1",
             }}
           />
         )}

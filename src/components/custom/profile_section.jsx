@@ -22,6 +22,7 @@ export default function ProfileSection() {
       index % 2 === 1 ? (
         <span
           key={index}
+          className="dark-theme:text-transparent"
           style={{
             background: `linear-gradient(to right, ${gradientColors[0]}, ${gradientColors[1]})`,
             WebkitBackgroundClip: "text",
@@ -31,7 +32,7 @@ export default function ProfileSection() {
           {part}
         </span>
       ) : (
-        part
+        <span className="dark-theme:text-gray-100" key={index}>{part}</span>
       ),
     );
   };
@@ -46,7 +47,7 @@ export default function ProfileSection() {
             transition={{ duration: 0.5, ease: "easeOut" }}
             className="relative w-32 h-32 md:w-[15.625rem] md:h-[15.625rem]"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent rounded-[30%_70%_70%_30%/30%_30%_70%_70%] overflow-hidden shadow-lg">
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-transparent dark-theme:from-purple-400/30 dark-theme:to-transparent rounded-[30%_70%_70%_30%/30%_30%_70%_70%] overflow-hidden shadow-lg dark-theme:shadow-purple-900/20">
               <img
                 src={homeConfig.profile_image}
                 alt="Profile"
@@ -65,12 +66,12 @@ export default function ProfileSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0 }}
-            className="c-cursor-text text-4xl md:text-5xl font-bold"
+            className="c-cursor-text text-4xl md:text-5xl font-bold dark-theme:text-white"
           >
             {parseAboutMe(homeConfig.about_me)}
           </motion.h2>
 
-          <div className="c-cursor-text text-xl md:text-2xl w-full md:w-[31.25rem] text-muted-foreground">
+          <div className="c-cursor-text text-xl md:text-2xl w-full md:w-[31.25rem] text-muted-foreground dark-theme:text-gray-300">
             {parseDescription(homeConfig.description)}
           </div>
           <div className="flex gap-4 justify-center md:justify-start mt-[1rem]">
@@ -93,14 +94,14 @@ const parseDescription = (text) => {
     const matchStart = match.index;
 
     if (lastIndex < matchStart) {
-      result.push(text.slice(lastIndex, matchStart));
+      result.push(<span className="dark-theme:text-gray-300" key={`text-${matchStart}`}>{text.slice(lastIndex, matchStart)}</span>);
     }
 
     result.push(
       <LinkPreview
         key={match.index}
         url={url}
-        className="text-white"
+        className="text-white dark-theme:text-purple-200"
         newTab={true}
       >
         {linkText}
@@ -111,7 +112,7 @@ const parseDescription = (text) => {
   }
 
   if (lastIndex < text.length) {
-    result.push(text.slice(lastIndex));
+    result.push(<span className="dark-theme:text-gray-300" key="text-end">{text.slice(lastIndex)}</span>);
   }
 
   return result;

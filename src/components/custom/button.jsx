@@ -10,6 +10,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import config from "/CONFIG.json";
 
 const Button = React.forwardRef(function Button(
   {
@@ -28,6 +29,7 @@ const Button = React.forwardRef(function Button(
   const [isHovered, setIsHovered] = React.useState(false);
   const buttonRef = React.useRef(null);
   const animationFrameRef = React.useRef();
+  const isMinecraftTheme = config.global.font === 'minecraft';
 
   const handleMouseMove = (e) => {
     if (!buttonRef.current) return;
@@ -56,7 +58,7 @@ const Button = React.forwardRef(function Button(
       animationFrameRef.current = requestAnimationFrame(animatePosition);
     };
 
-    if (isHovered) {
+    if (isHovered && !isMinecraftTheme) {
       animationFrameRef.current = requestAnimationFrame(animatePosition);
     }
 
@@ -65,7 +67,7 @@ const Button = React.forwardRef(function Button(
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [isHovered, targetPosition]);
+  }, [isHovered, targetPosition, isMinecraftTheme]);
 
   const variants = {
     primary:
@@ -76,14 +78,14 @@ const Button = React.forwardRef(function Button(
 
   const buttonClassName = cn(
     "c-cursor-pointer inline-block px-4 py-2 rounded-xl transform active:scale-95 active:brightness-90 transition-all duration-200 ease-in-out",
-    hoverEffect && "hover:brightness-110 hover:scale-[101.5%]",
-    variants[variant],
+    hoverEffect && !isMinecraftTheme && "hover:brightness-110 hover:scale-[101.5%]",
+    isMinecraftTheme ? "minecraft-button" : variants[variant],
     className,
   );
 
   const ButtonContent = () => (
     <>
-      {isHovered && variant === "primary" && (
+      {isHovered && variant === "primary" && !isMinecraftTheme && (
         <div
           className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-80"
           style={{

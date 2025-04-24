@@ -63,13 +63,13 @@ export const ContactForm = ({ config, onSubmit }) => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="bg-black/50 shadow-md rounded-lg p-8 space-y-6"
+        className="bg-white/90 shadow-lg rounded-[24px] p-8 space-y-6 border-2 border-[#F48FB1]"
       >
         {config.fields.map((field) => (
           <div key={field.name}>
             <label
               htmlFor={field.name}
-              className="block text-gray-700 font-medium mb-2"
+              className="block text-[#F06292] font-medium mb-2"
             >
               {field.label}
             </label>
@@ -80,7 +80,7 @@ export const ContactForm = ({ config, onSubmit }) => {
                 required={field.required}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="c-cursor-text w-full px-3 py-2 border bg-[#FCE4EC]/50 rounded-[16px] focus:outline-none focus:ring-2 focus:ring-[#FF80AB] border-[#FFB7C5]"
                 rows="4"
               />
             ) : (
@@ -91,7 +91,7 @@ export const ContactForm = ({ config, onSubmit }) => {
                 required={field.required}
                 value={formData[field.name]}
                 onChange={handleChange}
-                className="c-cursor-text w-full px-3 py-2 border bg-black/10 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="c-cursor-text w-full px-3 py-2 border bg-[#FCE4EC]/50 rounded-[16px] focus:outline-none focus:ring-2 focus:ring-[#FF80AB] border-[#FFB7C5]"
               />
             )}
           </div>
@@ -99,7 +99,7 @@ export const ContactForm = ({ config, onSubmit }) => {
 
         <button
           type="submit"
-          className="c-cursor-pointer w-full bg-primary text-white py-3 rounded-md hover:bg-primary/90 transition-colors"
+          className="c-cursor-pointer w-full bg-[#FF80AB] text-white py-3 rounded-[16px] hover:bg-[#FF80AB]/90 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all"
         >
           {config.send_button}
         </button>

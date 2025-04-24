@@ -1,29 +1,29 @@
 {
    "siteMetadata":{
-      "title":"Portfolio",
-      "description": "Hi, my name is Maxim! This is my personal page where you can find out more about who I am, what I do, and the projects I'm working on.",
+      "title":"Vishrut Kumar - Portfolio",
+      "description": "Hi, I'm Vishrut Kumar! This is my personal page where you can find out more about my experience, projects, and skills.",
         "embeds": {
-            "color": "#ce6419",
+            "color": "#ff80ab",
             "twitter_card": "summary_large_image",
             "image": "/images/embed.gif"
         }
    },
    "global":{
-      "font":"roboto",
+      "font":"comicsans",
       "home_route":"/home",
       "custom_cursor":{
-         "enabled":false,
+         "enabled":true,
          "sparkles":true,
          "transitions":true,
          "move_speed":0.05
       }
    },
    "footer":{
-      "text":"© 2025 Maxim - All rights reserved.",
+      "text":"© 2025 Vishrut Kumar - All rights reserved.",
       "links":[
          {
             "label":"GitHub",
-            "url":"https://github.com/maximjsx/portfolio"
+            "url":"https://github.com/kumarthevishrut"
          },
          {
             "label":"Contact",
@@ -39,25 +39,26 @@
       "home":{
          "enabled":true,
          "route":"/home",
-         "profile_image":"https://avatars.githubusercontent.com/u/114857048?v=4",
-         "gradient": "#7556bf:#bd4f9e",
-         "about_me":"~~~Hi, I'm Maxim!~~~",
-         "description": "I’ve spent a lot of time messing around in the [Minecraft](https://www.minecraft.net/) modding scene, mostly making plugins and libraries like [HologramLib](https://github.com/HologramLib).",
+         "profile_image":"/profile.png",
+         "gradient": "#ff80ab:#9c27b0",
+         "about_me":"~~~Hi, I'm Vishrut Kumar!~~~",
+         "description": "Wassup frens :) ᓚ₍ ^. .^₎, Welcome to my portfolio!  I code cool stuff btw , Can do AI-ML stuff as well btw, Vibe coder with wisdom , Roblox & Minecraft connoisseur, Monster energy drink enthusiast, I use Nvim and mintOS btw ",
          "tools_languages_title":"Tools & Languages",
          "languages":[
-            "Java",
-            "JavaScript",
-            "TypeScript",
-            "Python"
+            "Python",
+            "SQL",
+            "HTML",
+            "CSS",
+            "JavaScript"
          ],
          "tools":[
-            "Next.js",
-            "MongoDB",
-            "Intellij",
-            "MariaDB",
-            "Pycharm",
-            "FIX",
-            "Git"
+            "Jupyter Lab",
+            "Excel",
+            "Flask",
+            "Figma",
+            "Deep Learning",
+            "LLMs",
+            "Analytics"
          ],
          "action_buttons":[
             {
@@ -66,8 +67,8 @@
                "style":"primary"
             },
             {
-               "label":"Source Code",
-               "route":"https://github.com/maximjsx/portfolio",
+               "label":"Download Resume",
+               "route":"https://kumarthevishrut.github.io/Portfolio-Website/resume.pdf",
                "style":"secondary"
             }
          ],
@@ -76,24 +77,24 @@
             "title":"My Experience",
             "list":[
                {
-                  "title":"Software Developer",
-                  "company":"India Solutions",
-                  "date":"2023 - Present",
-                  "description":"Developing highly effective phishing tools and creating innovative callcenter software solutions using cutting-edge technologies to improve the customer experience.",
+                  "title":"AI Model Analyst Intern",
+                  "company":"Verse Innovation Private Limited (Dailyhunt & Josh)",
+                  "date":"May 2024 - August 2024",
+                  "description":"Underwent the boot-camp for deep learning and analytics. Made an internal tool which gave insights on several AI models. Used database querying and hosted the tool on cloud. Analyzed the AI model performance on several features. Gave insights on the performance and suggested changes in the models.",
                   "side":"left"
                },
                {
-                  "title":"Planetary Mineralogy Specialist",
-                  "company":"NASA",
-                  "date":"2022 - 2023",
-                  "description":"Led the inspection, analysis, and cataloging of unique mineral deposits found on Mars, including the discovery of the Jerome T. K. mineral.",
+                  "title":"Web Development Intern",
+                  "company":"Swami Integrators and consultants LLP",
+                  "date":"June 2023 - August 2023",
+                  "description":"Designed a website for the business and developed and learned about integration of cost calculator. Using data and zoning analysis on company to get information helping in developing a maintenance strategy. Attended a seminar by Havells which discussed on the new technologies in the industry helping in grid integration and energy management.",
                   "side":"right"
                },
                {
-                  "title":"Certified Pandemic Survivor",
-                  "company":"Self-employed",
-                  "date":"2020 - 2022",
-                  "description":"Managed Zoom meetings while playing Bedwars and Among Us, effectively balancing work and gaming.",
+                  "title":"Bachelor of Technology in Computer Science (AI & ML)",
+                  "company":"Sri Sri University",
+                  "date":"2021-2025",
+                  "description":"Studying AI/ML, OS, Advanced Statistics, Python, Web Applications and more. Participated in various competitions and events.",
                   "side":"left"
                }
             ]
@@ -106,34 +107,37 @@
       },
       "contact":{
          "enabled":true,
-         "header":"Socials",
+         "header":"Contact Me",
          "route":"/contact",
-         "email":"forking@duck.com",
+         "email":"thevishrutkumar@gmail.com",
          "direct_contact":"Reach Me Directly",
          "legal":{
             "enabled":true,
-            "name":"Maxim",
-            "address":"[REDACTED]",
-            "email":"legal@maxim.cat",
-            "phone":"[REDACTED]",
-            "tax_id":"Not Applicable",
+            "name":"Vishrut Kumar",
+            "address":"Bengaluru, IN",
+            "email":"thevishrutkumar@gmail.com",
             "legal_disclaimer":"This is a personal portfolio website for demonstration purposes."
          },
          "social_links":[
             {
                "name":"GitHub",
-               "url":"https://github.com/maximjsx",
+               "url":"https://github.com/kumarthevishrut",
                "icon":"github"
             },
             {
-               "name":"TikTok",
-               "url":"https://tiktok.com/@maximde",
-               "icon":"tiktok"
+               "name":"LinkedIn",
+               "url":"https://linkedin.com/in/vishrut-k",
+               "icon":"linkedin"
             },
             {
-               "name":"YouTube",
-               "url":"https://www.youtube.com/@maximjsx",
-               "icon":"youtube"
+               "name":"Medium",
+               "url":"https://medium.com/@thevishrutkumar",
+               "icon":"medium"
+            },
+            {
+               "name":"Spotify",
+               "url":"https://open.spotify.com/user/31est4cl35mlx2cy5v2m3gn4e4je",
+               "icon":"spotify"
             }
          ],
          "contact_form":{
@@ -170,7 +174,7 @@
          "route":"/privacy",
          "content":{
             "contact_title":"Contact",
-            "contact":"legal@maxim.cat",
+            "contact":"thevishrutkumar@gmail.com",
             "introduction":"This portfolio website is designed with minimal data collection and maximum user privacy in mind.",
             "sections":[
                {
@@ -195,7 +199,7 @@
                   "title":"Third-Party Services",
                   "description":"Potential data collection by third-party services:",
                   "details":[
-                     "Image hosting services (e.g., shields.io) may collect IP address during image requests",
+                     "Image hosting services may collect IP address during image requests",
                      "Standard browser and server logs may capture additional metadata"
                   ]
                },
@@ -221,162 +225,56 @@
          }
       }
    },
-   "card":{
-      "pop_in":true,
-      "hover_effect":true,
-      "hover_glow":true,
-      "image_shine":true
-   },
-   "cards":[
-      {
-         "title":"Portfolio (This website)",
-         "description":"Customizable, responsive, portfolio website built with Next.js",
-         "imageSRC":"/images/projects/portfolio.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/portfolio",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/portfolio.svg?style=flat"
-         ]
+   "cards": [
+    {
+      "title": "Kanban TODO List ",
+      "description": "Kanban board for event scheduling with Flask and API integration",
+      "image": "https://plus.unsplash.com/premium_photo-1661963783275-dff88a0296f6?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "button": {
+        "text": "View on GitHub",
+        "url": "https://github.com/KumarTheVishrut/weekday-ram-shyam-todolist"
       },
-      {
-         "title":"Fancy Physics",
-         "description":"Tree fall animation, hit particles, realistic explosions, 3D particles & more",
-         "imageSRC":"/images/projects/fancyphysics.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/110500/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/110500"
-         ]
+      "badges": ["Python", "Flask"]
+    },
+    {
+      "title": "Predictive Maintenance of Industrial Equipment",
+      "description": "ML to detect equipment failure of solar panels using industry data.",
+      "image": "https://images.unsplash.com/photo-1662913837197-43be2516fa84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "button": {
+        "text": "View Project",
+        "url": "https://github.com/KumarTheVishrut/Predictive-Maintenance-of-Industrial-Equipment"
       },
-      {
-         "title":"Better Chat Bubbles",
-         "description":"Packet based chat bubbles above players head, with an extensive API",
-         "imageSRC":"/images/projects/betterchatbubbles.webp",
-         "buttonText":"Buy on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/115811/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/115811"
-         ]
+      "badges": ["Python", "JupyterLab"]
+    },
+    {
+      "title": "Neural Networks from scratch in C++",
+      "description": "Used C++ for embedded ML",
+      "image": "https://plus.unsplash.com/premium_photo-1681586126003-2a6d4ba943a2?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "button": {
+        "text": "Checkout the repo",
+        "url": "https://github.com/KumarTheVishrut/Neural-Networks-C-MNIST-fashion-"
       },
-      {
-         "title":"Fancy Readme Stats",
-         "description":"Animated Readme Cards - For your GitHub profile or repository readme",
-         "imageSRC":"/images/projects/readmestats.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/fancy-readme-stats",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/fancy-readme-stats.svg?style=flat"
-         ]
+      "badges": ["C++","Deep Learning"]
+    },
+    {
+      "title": "Medium Blog",
+      "description": "A fun anecdote with some insights on deep learning and neural networks.",
+      "image": "https://images.unsplash.com/photo-1592839961631-0351c10a0b47?q=80&w=2132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "button": {
+        "text": "Read on Medium",
+        "url": "https://medium.com/@kumarthevishrut"
       },
-      {
-         "title":"HologramLib",
-         "description":"Packet based text display hologram library with minimessage and emoji support",
-         "imageSRC":"/images/projects/hologramapi.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/HologramLib",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/HologramLib.svg?style=flat"
-         ]
+      "badges": ["Blog"]
+    },
+    {
+      "title": "Substack",
+      "description": "My thoughts on AI and finance published regularly on Substack.",
+      "image": "https://plus.unsplash.com/premium_vector-1736942106464-a7e43a7d61c0?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "button": {
+        "text": "Read on Substack",
+        "url": "https://wealthprudencewithvishrut.substack.com/subscribe?redirect=%2Fpublish%2Fposts&for_pub=wealthprudencewithvishrut&error=This%20page%20is%20private%20-%20try%20signing%20in%20with%20a%20different%20email%2C%20or%20letting%20the%20author%20know%20they%27ve%20linked%20to%20a%20private%20page.&change_user=false"
       },
-      {
-         "title":"Nextfight",
-         "description":"Nextfight is a Minecraft minigame network focused on a Battle Royale like gamemode",
-         "imageSRC":"/images/projects/nextfight.webp",
-         "buttonText":"Join the Discord",
-         "buttonURL":"https://discord.nextfight.net/",
-         "badges":[
-            "https://dcbadge.limes.pink/api/server/https://discord.gg/sB4nh3eHGB?style=flat"
-         ]
-      },
-      {
-         "title":"MaximClient",
-         "description":"MaximClient was a 1.8 PVP client with many mods and free online cosmetics",
-         "imageSRC":"/images/projects/maximclient.webp",
-         "buttonText":"Join the Discord",
-         "buttonURL":"https://discord.gg/eCn8VWEGbZ",
-         "badges":[
-            "https://dcbadge.limes.pink/api/server/https://discord.gg/eCn8VWEGbZ?style=flat"
-         ]
-      },
-      {
-         "title":"FIX",
-         "description":"A Windows tool for AI text correction and translation with hotkeys & voice control",
-         "imageSRC":"/images/projects/fix.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/FIX",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/FIX.svg?style=flat"
-         ]
-      },
-      {
-         "title":"Discord Embed Builder",
-         "description":"A Discord embed builder for users. No bot, webhook, mod or selfbot required!",
-         "imageSRC":"/images/projects/embedbuilder.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/discord-embed-builder",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/discord-embed-builder.svg?style=flat"
-         ]
-      },
-      {
-         "title":"World Border Bypass",
-         "description":"Bypass the vanilla worldborder building & combat limitations",
-         "imageSRC":"/images/projects/border.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/BeyondBorderUnlocked",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/BeyondBorderUnlocked.svg?style=flat"
-         ]
-      },
-      {
-         "title":"Next.js Template",
-         "description":"A powerful Next.js template combining the best UI component libraries",
-         "imageSRC":"/images/projects/template.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/maximjsx/template",
-         "badges":[
-            "https://img.shields.io/github/stars/maximjsx/template.svg?style=flat"
-         ]
-      },
-      {
-         "title":"EntitySize",
-         "description":"Change the size/scale of any living entity or player with an optional transition!",
-         "imageSRC":"/images/projects/entitysize.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/116497/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/116497"
-         ]
-      },
-      {
-         "title":"PassengerAPI",
-         "description":"Fix passenger compatibility issues | Manage your own entity passengers",
-         "imageSRC":"/images/projects/entitysize.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/117017/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/117017"
-         ]
-      },
-        {
-         "title":"Custom Score Numbers",
-         "description":"Remove/hide the red numbers in the scoreboard or change the color",
-         "imageSRC":"/images/projects/scorenumbers.webp",
-         "buttonText":"View on SpigotMC",
-         "buttonURL":"https://www.spigotmc.org/resources/115955/",
-         "badges":[
-            "https://img.shields.io/spiget/downloads/115955"
-         ]
-      },
-      {
-         "title":"Skin Overlay Generator",
-         "description":"Festive overlays for your Minecraft skin",
-         "imageSRC":"/images/projects/skinoverlay.webp",
-         "buttonText":"View on GitHub",
-         "buttonURL":"https://github.com/ToiletDevelopment/Skin-Overlay-Generator",
-         "badges":[
-            "https://img.shields.io/github/stars/ToiletDevelopment/Skin-Overlay-Generator.svg?style=flat"
-         ]
-      }
-   ]
+      "badges": ["Blog"]
+    }
+  ]
 }

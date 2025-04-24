@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body::before {
+body::before {
   content: "";
   position: fixed;
   top: -0.625rem;
@@ -11,29 +11,72 @@
   width: 140vw;
   height: 140vh;
   z-index: -1;
-  background-image: url("/images/background.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("/images/kawaii-bg.png");
+  background-repeat: repeat;
+  background-size: 200px;
   background-position: center center;
-  filter: blur(0.3125rem) brightness(0.6);
-  opacity: 0;
+  filter: brightness(0.9);
+  opacity: 0.1;
   animation: fadeIn 2s ease-in-out forwards;
-} */
+}
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.1;
   }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.kawaii-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.kawaii-element {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.kawaii-element.star-1 {
+  top: 15%;
+  left: 10%;
+  animation: float 3s ease-in-out infinite;
+}
+
+.kawaii-element.star-2 {
+  top: 25%;
+  right: 15%;
+  animation: float 4s ease-in-out infinite;
+}
+
+.kawaii-element.star-3 {
+  bottom: 20%;
+  left: 15%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.kawaii-element.heart {
+  bottom: 15%;
+  right: 10%;
+  animation: float 3.5s ease-in-out infinite;
 }
 
 img {
   -webkit-user-drag: none; 
   user-drag: none;
 }
-
 
 body {
   @apply font-sans bg-background text-foreground;
@@ -52,49 +95,49 @@ body {
   :root {
     --radius: 0.625rem;
 
-    /* Color Palette */
-    --color-1: #7556bf;
-    --color-2: #bd4f9e;
-    --color-3: #ce5573;
-    --color-4: #ce7659;
-    --color-5: #ffc962;
-    --color-6: #f9f871;
+    /* Kawaii Color Palette */
+    --color-1: #ff80ab; /* Pink */
+    --color-2: #f48fb1; /* Light Pink */
+    --color-3: #f06292; /* Medium Pink */
+    --color-4: #ec407a; /* Dark Pink */
+    --color-5: #ffb7c5; /* Pastel Pink */
+    --color-6: #fce4ec; /* Very Light Pink */
 
     /* Background and Foreground */
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
+    --background: 340 100% 97%;
+    --foreground: 340 60% 30%;
     --card: var(--background);
     --card-foreground: var(--foreground);
     --popover: var(--background);
     --popover-foreground: var(--foreground);
 
-    --primary: var(--color-2);
+    --primary: var(--color-3);
     --secondary: var(--color-1);
 
-    --primary-foreground: var(--foreground);
-    --secondary-foreground: var(--foreground);
+    --primary-foreground: 0 0% 100%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted & Accent */
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --muted: 340 30% 90%;
+    --muted-foreground: 340 50% 50%;
+    --accent: 340 70% 90%;
+    --accent-foreground: 340 60% 30%;
 
     /* Destructive */
     --destructive: 0 62.8% 50.6%;
-    --destructive-foreground: var(--foreground);
+    --destructive-foreground: 0 0% 100%;
 
     /* Border & Input */
-    --border: var(--secondary);
-    --input: var(--secondary);
-    --ring: 216 12.2% 83.9%;
+    --border: var(--color-2);
+    --input: var(--color-2);
+    --ring: var(--color-1);
 
     /* Charts */
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: 340 100% 74%;
+    --chart-2: 340 70% 80%;
+    --chart-3: 340 80% 86%;
+    --chart-4: 340 90% 92%;
+    --chart-5: 340 100% 98%;
   }
 
   * {
@@ -110,4 +153,454 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  
+  .glow {
+    text-shadow: 0 0 5px var(--color-2), 0 0 15px var(--color-2);
+  }
+}
+
+/* Kawaii Button Styles */
+button, .btn {
+  border-radius: 24px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 8px rgba(244, 143, 177, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 6px 12px rgba(244, 143, 177, 0.4) !important;
+}
+
+/* Kawaii Card Styles */
+.hover-card {
+  border-radius: 24px !important;
+  box-shadow: 0 8px 16px rgba(244, 143, 177, 0.25) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(252, 228, 236, 0.8)) !important;
+  border: 2px solid rgba(244, 143, 177, 0.4) !important;
+  overflow: hidden;
+}
+
+/* Add Minecraft-like styling at the end of the file */
+
+/* Minecraft font styling */
+.minecraft-text {
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+  image-rendering: pixelated;
+}
+
+/* When using minecraft font, apply these styles */
+:root:has(.minecraft-font) h1,
+:root:has(.minecraft-font) h2,
+:root:has(.minecraft-font) h3,
+:root:has(.minecraft-font) h4 {
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+  font-size: 90%; /* Slightly smaller text to accommodate the chunky font */
+}
+
+/* Pixel border for elements */
+.pixel-border {
+  box-shadow: 
+    -3px 0 0 0 #000,
+    3px 0 0 0 #000,
+    0 -3px 0 0 #000,
+    0 3px 0 0 #000;
+  image-rendering: pixelated;
+}
+
+/* Minecraft-like button - Primary is green gradient, Secondary is gray */
+.minecraft-button {
+  border: 2px solid #000;
+  border-bottom-width: 4px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000;
+  transition: all 0.08s;
+  border-radius: 0; /* Minecraft buttons are square */
+  position: relative;
+  color: white;
+  image-rendering: pixelated;
+  text-align: center;
+}
+
+.minecraft-button[href*="/projects"],
+.minecraft-button[primary] {
+  background-color: #54A93F; /* Minecraft green */
+  border-color: #2C7522;
+  box-shadow: inset 0 4px 0 0 #79C653, inset 0 -4px 0 0 #2C7522;
+}
+
+.minecraft-button[href*="resume"],
+.minecraft-button:not([href*="/projects"]) {
+  background-color: #747474; /* Minecraft gray */
+  border-color: #373737;
+  box-shadow: inset 0 4px 0 0 #9C9C9C, inset 0 -4px 0 0 #373737;
+}
+
+.minecraft-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.minecraft-button:active {
+  transform: translateY(2px);
+  filter: brightness(0.9);
+  box-shadow: none;
+  border-bottom-width: 2px;
+}
+
+/* Add Billo font styling after Minecraft styling */
+
+/* Billo font styling */
+.billo-font {
+  --billo-primary: #FF80AB;
+  --billo-secondary: #9C27B0;
+  --billo-accent: #FF4081;
+}
+
+:root:has(.billo-font) h1,
+:root:has(.billo-font) h2,
+:root:has(.billo-font) h3,
+:root:has(.billo-font) h4 {
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  color: var(--billo-primary);
+  text-shadow: 2px 2px 0 rgba(156, 39, 176, 0.3);
+}
+
+:root:has(.billo-font) .card-badges .badge {
+  font-family: var(--font-custom);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  letter-spacing: 0.05em;
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.2);
+  transform-origin: center;
+  transition: all 0.2s ease;
+}
+
+:root:has(.billo-font) .card-badges .badge:nth-child(odd) {
+  background-color: rgba(255, 128, 171, 0.8);
+  color: white;
+}
+
+:root:has(.billo-font) .card-badges .badge:nth-child(even) {
+  background-color: rgba(156, 39, 176, 0.8);
+  color: white;
+}
+
+:root:has(.billo-font) .card-badges .badge:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Billo button style */
+:root:has(.billo-font) .minecraft-button {
+  border-radius: 25px;
+  font-family: var(--font-custom);
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background: linear-gradient(to bottom, var(--billo-primary), var(--billo-accent));
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+:root:has(.billo-font) .minecraft-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+:root:has(.billo-font) .minecraft-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+:root:has(.billo-font) .minecraft-button[href*="/projects"],
+:root:has(.billo-font) .minecraft-button[primary] {
+  background: linear-gradient(to bottom, var(--billo-primary), var(--billo-accent));
+}
+
+:root:has(.billo-font) .minecraft-button[href*="resume"],
+:root:has(.billo-font) .minecraft-button:not([href*="/projects"]) {
+  background: linear-gradient(to bottom, var(--billo-secondary), #7B1FA2);
+}
+
+/* Add these styles to the Billo font section */
+
+/* Billo card styling */
+:root:has(.billo-font) .hover-card {
+  border-radius: 30px;
+  overflow: hidden;
+  border: 3px solid var(--billo-primary);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 228, 236, 0.9)) !important;
+  box-shadow: 
+    0 10px 20px rgba(255, 64, 129, 0.2),
+    0 0 0 3px rgba(255, 128, 171, 0.3) !important;
+  transition: all 0.3s ease;
+}
+
+:root:has(.billo-font) .hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 15px 30px rgba(255, 64, 129, 0.3),
+    0 0 0 4px rgba(255, 128, 171, 0.4) !important;
+}
+
+/* Billo profile image styling */
+:root:has(.billo-font) [src*="profile.png"] {
+  border-radius: 50%;
+  border: 5px solid var(--billo-primary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 0 10px rgba(255, 128, 171, 0.5));
+  transition: all 0.3s ease;
+}
+
+:root:has(.billo-font) [src*="profile.png"]:hover {
+  transform: scale(1.05) rotate(3deg);
+  border-color: var(--billo-secondary);
+}
+
+/* Billo text decoration */
+:root:has(.billo-font) h1::after,
+:root:has(.billo-font) h2::after {
+  content: " ♥";
+  font-size: 0.8em;
+  color: var(--billo-accent);
+  display: inline-block;
+  animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.2); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.1); }
+}
+
+/* Additional decorative elements for Billo */
+:root:has(.billo-font) .kawaii-element.star-1 svg path,
+:root:has(.billo-font) .kawaii-element.star-3 svg path {
+  fill: var(--billo-primary);
+  stroke: var(--billo-accent);
+  stroke-width: 2;
+}
+
+/* Add Comic Sans MS styling after Billo styling */
+
+/* Comic Sans styling */
+.comic-sans-font {
+  --comic-primary: #ff80ab;
+  --comic-secondary: #9c27b0;
+  --comic-accent: #f48fb1;
+  --comic-text: #333333;
+}
+
+/* Dark mode colors */
+.dark-theme {
+  --background: 280 70% 10%;
+  --foreground: 340 60% 90%;
+  --card: 280 60% 15%;
+  --card-foreground: 340 60% 90%;
+  --popover: 280 70% 10%;
+  --popover-foreground: 340 60% 90%;
+  --muted: 280 50% 20%;
+  --muted-foreground: 340 50% 70%;
+  --accent: 280 50% 25%;
+  --accent-foreground: 340 60% 90%;
+  
+  /* Dark theme specific colors */
+  --primary-dark: #ba68c8;
+  --secondary-dark: #9c27b0;
+  --dark-bg: #1a0b2e;
+  --dark-card: #2d1a39;
+}
+
+.dark-theme body {
+  background-color: #1a0b2e;
+  color: #f5f5f5;
+}
+
+.dark-theme .comic-sans-font {
+  --comic-primary: #ff80ab;
+  --comic-secondary: #9c27b0;
+  --comic-accent: #ba68c8;
+  --comic-text: #f5f5f5;
+}
+
+.dark-theme :root:has(.comic-sans-font) .hover-card {
+  background: #2d1a45 !important;
+  border-color: #ff80ab !important;
+  color: white;
+}
+
+.dark-theme :root:has(.comic-sans-font) h1,
+.dark-theme :root:has(.comic-sans-font) h2,
+.dark-theme :root:has(.comic-sans-font) h3,
+.dark-theme :root:has(.comic-sans-font) h4 {
+  color: var(--comic-primary);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+:root:has(.comic-sans-font) h1,
+:root:has(.comic-sans-font) h2,
+:root:has(.comic-sans-font) h3,
+:root:has(.comic-sans-font) h4 {
+  color: var(--comic-primary);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+}
+
+/* Comic Sans button style with hand-drawn look */
+:root:has(.comic-sans-font) .minecraft-button {
+  background-color: var(--comic-primary);
+  color: white;
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 10px 20px;
+  box-shadow: 3px 3px 0 #000;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: all 0.1s;
+  transform: rotate(-1deg);
+}
+
+:root:has(.comic-sans-font) .minecraft-button:hover {
+  background-color: var(--comic-accent);
+  transform: rotate(1deg) scale(1.05);
+}
+
+:root:has(.comic-sans-font) .minecraft-button:active {
+  transform: translate(3px, 3px) rotate(1deg);
+  box-shadow: 0 0 0 #000;
+}
+
+:root:has(.comic-sans-font) .minecraft-button[href*="/projects"],
+:root:has(.comic-sans-font) .minecraft-button[primary] {
+  background-color: var(--comic-primary);
+}
+
+:root:has(.comic-sans-font) .minecraft-button[href*="resume"],
+:root:has(.comic-sans-font) .minecraft-button:not([href*="/projects"]) {
+  background-color: var(--comic-secondary);
+}
+
+/* Comic Sans card styling with hand-drawn look */
+:root:has(.comic-sans-font) .hover-card {
+  background: white !important;
+  border: 3px solid #000 !important;
+  border-radius: 15px !important;
+  box-shadow: 5px 5px 0 #000 !important;
+  transform: rotate(-1deg);
+  transition: all 0.2s;
+}
+
+:root:has(.comic-sans-font) .hover-card:hover {
+  transform: rotate(1deg) translateY(-5px);
+  box-shadow: 8px 8px 0 #000 !important;
+}
+
+/* Comic Sans badge styling */
+:root:has(.comic-sans-font) .card-badges .badge {
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 3px 8px;
+  transform: rotate(-2deg);
+  box-shadow: 2px 2px 0 #000;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+:root:has(.comic-sans-font) .card-badges .badge:nth-child(odd) {
+  background-color: var(--comic-primary);
+  color: white;
+  transform: rotate(-2deg);
+}
+
+:root:has(.comic-sans-font) .card-badges .badge:nth-child(even) {
+  background-color: var(--comic-secondary);
+  color: white;
+  transform: rotate(2deg);
+}
+
+:root:has(.comic-sans-font) .card-badges .badge:hover {
+  transform: scale(1.1) rotate(0);
+}
+
+/* Comic Sans decoration */
+:root:has(.comic-sans-font) .kawaii-element svg path {
+  stroke-width: 2;
+  stroke: black;
+}
+
+/* Dark mode - Global styles */
+.dark-theme {
+  --background: 280 70% 10%;
+  --foreground: 340 60% 90%;
+  --card: 280 60% 15%;
+  --card-foreground: 340 60% 90%;
+  --popover: 280 70% 10%;
+  --popover-foreground: 340 60% 90%;
+  --muted: 280 50% 20%;
+  --muted-foreground: 340 50% 70%;
+  --accent: 280 50% 25%;
+  --accent-foreground: 340 60% 90%;
+  
+  /* Dark theme specific colors */
+  --primary-dark: #ba68c8;
+  --secondary-dark: #9c27b0;
+  --dark-bg: #1a0b2e;
+  --dark-card: #2d1a39;
+}
+
+.dark-theme body {
+  background-color: #1a0b2e;
+  color: #f5f5f5;
+}
+
+/* Dark mode navbar */
+.dark-theme nav {
+  background-color: rgba(26, 11, 46, 0.7);
+}
+
+.dark-theme nav.scrolled {
+  background-color: rgba(26, 11, 46, 0.9);
+}
+
+/* Dark mode cards */
+.dark-theme .hover-card {
+  background: linear-gradient(135deg, rgba(45, 26, 57, 0.9), rgba(26, 11, 46, 0.8)) !important;
+  border-color: var(--primary-dark) !important;
+  color: white;
+}
+
+/* Dark mode links */
+.dark-theme a:not(.btn):not(.hover-card) {
+  color: var(--primary-dark);
+}
+
+.dark-theme a:hover:not(.btn):not(.hover-card) {
+  color: #ce93d8;
+}
+
+/* Dark mode buttons */
+.dark-theme button, 
+.dark-theme .btn {
+  background-color: var(--secondary-dark);
+  border-color: var(--primary-dark);
+  color: white;
+}
+
+.dark-theme button:hover,
+.dark-theme .btn:hover {
+  background-color: var(--primary-dark);
 }

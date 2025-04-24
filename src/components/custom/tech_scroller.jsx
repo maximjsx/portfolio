@@ -21,7 +21,7 @@ export default function TechScroller() {
           direction="left"
           speed="fast"
           className="max-w-xs"
-          itemClasses="bg-white/30"
+          itemClasses="bg-[#FFB7C5]/80 text-[#F06292] border border-[#F48FB1] shadow-sm"
         />
       </div>
 
@@ -31,7 +31,7 @@ export default function TechScroller() {
           direction="right"
           speed="slow"
           className="max-w-lg"
-          itemClasses="bg-white/10"
+          itemClasses="bg-[#E1BEE7]/80 text-[#9C27B0] border border-[#BA68C8] shadow-sm"
         />
       </div>
     </div>

@@ -47,9 +47,8 @@ export default function Projects() {
             <Card
               title={card.title}
               description={card.description}
-              imageSRC={card.imageSRC}
-              buttonText={card.buttonText}
-              buttonURL={card.buttonURL}
+              image={card.image}
+              button={card.button}
               badges={card.badges}
             />
           </div>

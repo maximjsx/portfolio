@@ -19,6 +19,7 @@ import {
   FaSpotify,
   FaXbox,
   FaFacebook,
+  FaMedium
 } from "react-icons/fa";
 
 export const SocialIcon = ({ name }) => {
@@ -34,22 +35,23 @@ export const SocialIcon = ({ name }) => {
     spotify: FaSpotify,
     xbox: FaXbox,
     facebook: FaFacebook,
+    medium: FaMedium
   };
 
   const Icon = iconMap[name.toLowerCase()] || FaEnvelope;
-  return <Icon className="w-6 h-6" />;
+  return <Icon className="w-8 h-8" />;
 };
 
 export const SocialLinks = ({ links, className = "" }) => {
   return (
-    <div className={`flex justify-center space-x-6 ${className}`}>
+    <div className={`flex justify-center space-x-8 ${className}`}>
       {links.map((social, index) => (
         <a
           key={index}
           href={social.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="c-cursor-pointer text-gray-600 hover:text-primary transition-colors"
+          className="c-cursor-pointer text-[#F06292] hover:text-[#FF80AB] dark-theme:text-purple-300 dark-theme:hover:text-purple-200 transition-colors transform hover:scale-110 transition-transform bg-white/80 dark-theme:bg-[#2d1a39]/80 p-3 rounded-full shadow-md border border-[#FFB7C5] dark-theme:border-purple-800 hover:shadow-lg"
           title={social.name}
         >
           <SocialIcon name={social.icon} />

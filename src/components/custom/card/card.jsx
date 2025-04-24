@@ -22,12 +22,19 @@ const Card = React.forwardRef(
       description,
       buttonText,
       buttonURL,
-      imageSRC = "/images/projects/placeholder.png",
+      button,
+      imageSRC,
+      image,
       badges = [],
       ...props
     },
     ref,
   ) => {
+    // Handle different prop formats (for backward compatibility)
+    const finalImageSrc = image || imageSRC || "/images/projects/placeholder.png";
+    const finalButtonText = button?.text || buttonText || null;
+    const finalButtonURL = button?.url || buttonURL || null;
+
     const cardClassName = cn(
       "rounded-xl hover-card",
       className,
@@ -43,7 +50,7 @@ const Card = React.forwardRef(
         <div className="hover-glow absolute inset-0 pointer-events-none"></div>
         <div className="rotating-glow absolute inset-0 pointer-events-none"></div>
 
-        {imageSRC && <CardImage imageSRC={imageSRC} title={title} />}
+        {finalImageSrc && <CardImage imageSRC={finalImageSrc} title={title} />}
 
         <div className="p-6">
           <CardBadges badges={badges} />
@@ -64,10 +71,10 @@ const Card = React.forwardRef(
             </p>
           )}
 
-          {buttonText && buttonURL && (
+          {finalButtonText && finalButtonURL && (
             <div className="flex justify-center mt-[1rem]">
-              <Button href={buttonURL} variant="secondary" newTab={true}>
-                {buttonText}
+              <Button href={finalButtonURL} variant="secondary" newTab={true}>
+                {finalButtonText}
               </Button>
             </div>
           )}

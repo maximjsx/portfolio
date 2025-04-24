@@ -8,6 +8,8 @@
   height: 25rem;
   box-shadow: 0 0.0625rem 0.3125rem #00000047;
   background-image: radial-gradient(circle at 50% -20%, #ffffff22, #00000000);
+  --color-1: #FF80AB;
+  --color-2: #9C27B0;
 }
 
 .hover-card:hover {
@@ -64,6 +66,18 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  filter: saturate(1.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .card-badges img {

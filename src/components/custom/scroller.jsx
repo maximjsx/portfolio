@@ -26,7 +26,7 @@ const Scroller = ({
             key={index}
             className={
               itemClasses +
-              " px-4 py-2 rounded-full text-sm transition-opacity duration-1000 opacity-0"
+              " px-4 py-2 rounded-[24px] text-sm transition-opacity duration-1000 opacity-0 font-medium hover:scale-110 transition-transform"
             }
           >
             {item}

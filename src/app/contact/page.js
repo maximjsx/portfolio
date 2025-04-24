@@ -40,7 +40,7 @@ export default function Contact() {
         animation="blurInUp"
         by="character"
         duration={1.5}
-        className="c-cursor-text text-4xl uppercase glow font-bold text-center mb-10"
+        className="c-cursor-text text-4xl uppercase glow font-bold text-center mb-10 text-[#F06292]"
       >
         {contactConfig.header}
       </TextAnimate>
@@ -56,12 +56,12 @@ export default function Contact() {
 
       <LegalInfo legal={contactConfig.legal} />
 
-      <div className="mt-[3rem]  text-center">
-        <h2 className="c-cursor-text text-2xl font-semibold mb-4">
+      <div className="mt-[3rem] text-center bg-white/90 rounded-[24px] p-6 border-2 border-[#F48FB1] shadow-lg">
+        <h2 className="c-cursor-text text-2xl font-semibold mb-4 text-[#F06292]">
           {contactConfig.direct_contact}
         </h2>
-        <a className="c-cursor-text text-primary flex items-center justify-center gap-2">
-          <FaEnvelope className="inline-block" />
+        <a className="c-cursor-text flex items-center justify-center gap-2 text-[#FF80AB]">
+          <FaEnvelope className="inline-block text-[#F06292]" />
           {contactConfig.email}
         </a>
       </div>

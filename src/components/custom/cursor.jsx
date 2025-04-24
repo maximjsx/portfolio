@@ -172,17 +172,18 @@ const CustomCursor = () => {
   }, []);
 
   const createSparkle = (x, y) => {
-    if (!sparkleRef.current) return;
-
-    const numberOfSparkles = 6 + Math.floor(Math.random() * 10);
-
-    for (let i = 0; i < numberOfSparkles; i++) {
+    for (let i = 0; i < 4; i++) {
+      const size = 10 + Math.random() * 10;
       const sparkle = document.createElement("div");
-      sparkle.classList.add("sparkle");
-
-      const size = 1 + Math.random() * 8;
+      sparkle.className = "sparkle";
+      
+      // Randomize the color of sparkles
+      const colors = ['#FF80AB', '#F48FB1', '#F06292', '#FFB7C5', '#FFCDD2'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      
       sparkle.style.width = `${size}px`;
       sparkle.style.height = `${size}px`;
+      sparkle.style.backgroundColor = randomColor;
 
       const randomDirection = Math.random() * 360;
       const randomDistance = 10 + Math.random() * 30;
@@ -285,9 +286,8 @@ const CustomCursor = () => {
 
 .sparkle {
   position: absolute;
-  background-color: white;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px 5px rgba(255, 128, 171, 0.8);
   z-index: 99999;
   pointer-events: none;
   animation: sparkleEffect 1s ease-out forwards;
