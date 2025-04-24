@@ -106,6 +106,7 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="theme-color" content="#9c27b0" />
         <meta name="msapplication-TileColor" content="#9c27b0" />
+        <link rel="preload" href="/scripts/dark-mode.js" as="script" />
         <script src="/scripts/dark-mode.js"></script>
       </head>
       <body
