@@ -107,12 +107,12 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#9c27b0" />
         <meta name="msapplication-TileColor" content="#9c27b0" />
         <link rel="preload" href="/scripts/dark-mode.js" as="script" />
-        <script src="/scripts/dark-mode.js"></script>
       </head>
       <body
         className={`${!isComicSansFont ? selectedFont.variable : ''} ${isMinecraftFont ? 'minecraft-font' : ''} ${isComicSansFont ? 'comic-sans-font' : ''} min-h-screen antialiased flex flex-col overflow-x-hidden`}
         style={inlineStyle}
       >
+        <Script src="/scripts/dark-mode.js" strategy="beforeInteractive" />
         <link rel="preconnect" href="https://img.shields.io"></link>
         <Background />
         

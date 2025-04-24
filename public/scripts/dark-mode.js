@@ -12,8 +12,11 @@
  * This script executes immediately to prevent flash of incorrect theme
  */
 
-// Execute this immediately
+// Execute this immediately, but only in browser
 (function() {
+  // Check if running in browser environment
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+  
   try {
     // Get dark mode preference from localStorage or system preference
     const storedDarkMode = localStorage.getItem('darkMode');
@@ -37,23 +40,25 @@
 })();
 
 // Make toggle function available globally for UI elements
-window.toggleDarkMode = function() {
-  try {
-    const isDarkMode = document.documentElement.classList.contains('dark-theme');
-    
-    if (isDarkMode) {
-      document.documentElement.classList.remove('dark-theme');
-      localStorage.setItem('darkMode', 'false');
-      console.log('Theme toggled to: light');
+if (typeof window !== 'undefined') {
+  window.toggleDarkMode = function() {
+    try {
+      const isDarkMode = document.documentElement.classList.contains('dark-theme');
+      
+      if (isDarkMode) {
+        document.documentElement.classList.remove('dark-theme');
+        localStorage.setItem('darkMode', 'false');
+        console.log('Theme toggled to: light');
+        return false;
+      } else {
+        document.documentElement.classList.add('dark-theme');
+        localStorage.setItem('darkMode', 'true');
+        console.log('Theme toggled to: dark');
+        return true;
+      }
+    } catch (e) {
+      console.error('Error toggling dark mode:', e);
       return false;
-    } else {
-      document.documentElement.classList.add('dark-theme');
-      localStorage.setItem('darkMode', 'true');
-      console.log('Theme toggled to: dark');
-      return true;
     }
-  } catch (e) {
-    console.error('Error toggling dark mode:', e);
-    return false;
-  }
-}; 
+  };
+} 

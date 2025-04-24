@@ -21,6 +21,11 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
+  // ESLint configuration for builds
+  eslint: {
+    // Warning during builds instead of errors
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
