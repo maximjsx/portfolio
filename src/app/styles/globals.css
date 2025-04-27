@@ -83,14 +83,6 @@ body {
   cursor: url("/cursor/normal-32.png"), auto;
 }
 
-.c-cursor-pointer {
-  cursor: url("/cursor/pointer-32.png"), auto;
-}
-
-.c-cursor-text {
-  cursor: url("/cursor/text-32.png"), auto;
-}
-
 @layer base {
   :root {
     --radius: 0.625rem;
