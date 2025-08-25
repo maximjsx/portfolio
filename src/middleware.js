@@ -12,9 +12,9 @@ import configuration from "/CONFIG.json";
 export function middleware(req) {
   const { pathname } = req.nextUrl;
 
-  if (pathname === "/") {
+  if (pathname === "/home") {
     return NextResponse.redirect(
-      new URL(configuration.global.home_route || "/home", req.url),
+      new URL(configuration.global.home_route || "/", req.url),
     );
   }
 
@@ -22,5 +22,5 @@ export function middleware(req) {
 }
 
 export const config = {
-  matcher: "/",
+  matcher: "/home",
 };

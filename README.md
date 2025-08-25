@@ -1,7 +1,7 @@
 <div align="center">
 <a href="https://discord.gg/2UTkYj26B4"><img src="https://img.shields.io/badge/Discord_Server-7289DA?style=flat&logo=discord&logoColor=white" alt="Join Discord Server" style="border-radius: 15px; height: 20px;"></a>  
 <a href="/" ><img src="https://wakatime.com/badge/user/018ea406-0db5-4668-8046-69289ce4a09e/project/a77fd0f2-6eee-4a71-aab3-916f96c273ec.svg" alt="Waka Time Stats" style="border-radius: 15px; height: 20px;"></a>  
-<a href="https://maxim.cat/home"><img src="https://img.shields.io/badge/Preview-4CAF50?style=flat&logo=vercel&logoColor=white" alt="Preview Website" ></a>
+<a href="https://maxim.cat/"><img src="https://img.shields.io/badge/Preview-4CAF50?style=flat&logo=vercel&logoColor=white" alt="Preview Website" ></a>
 <br><br>  
 <img width="1000" src="assets/preview.png" />
 <br>

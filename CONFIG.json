@@ -10,7 +10,7 @@
    },
    "global":{
       "font":"geist",
-      "home_route":"/home",
+      "home_route":"/",
       "background_image":"/images/background.webp",
       "background_image_secondary":"/images/background-small.webp",
       "gradient":"#3f5a70:#378765",
@@ -56,6 +56,30 @@
       ]
    },
    "pages":{
+      "not_found": {
+  "title": "Oops! Page Not Found",
+  "description": "The page you're looking for straight up dipped. Don't trip tho, even the real ones get lost sometimes",
+  "suggestions": {
+    "title": "Here's what you can try:",
+    "items": [
+            {
+        "text": "Go to the previous page",
+        "icon": "arrow-left"
+      },
+            {
+        "text": "Check the URL for typos",
+        "icon": "search"
+      },
+      {
+        "text": "Contact us for help",
+        "icon": "mail"
+      }
+    ]
+  },
+  "button": {
+    "text": "Back to Home"
+  }
+},
       "custom":{
          "HologramLib":{
             "enabled":true,
@@ -224,7 +248,7 @@
       },
       "home":{
          "enabled":true,
-         "route":"/home",
+         "route":"/",
          "name":"Home",
          "profile_image":"/images/avatar_3.png",
          "about_me":"<gradient>Хей, I'm Maxim!</gradient>",

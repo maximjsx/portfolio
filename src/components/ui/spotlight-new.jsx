@@ -25,7 +25,7 @@ export const Spotlight = ({
   xOffset = 100,
 } = {}) => {
   const pathname = usePathname();
-  const homeRoute = config.global.home_route || "/home";
+  const homeRoute = config.global.home_route || "/";
 
   if (pathname !== homeRoute) {
     return null;
