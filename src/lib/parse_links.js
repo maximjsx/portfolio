@@ -9,6 +9,7 @@
 
 import { LinkPreview } from "@/components/ui/link-preview";
 import config from "/CONFIG.json";
+import Link from "next/link";
 
 export function parseText(text) {
   let placeholders = {};
@@ -41,8 +42,7 @@ export function parseText(text) {
     let currentIndex = 0;
 
     const patterns = [
-      { regex: /\[([^\]]+)]\((https?:\/\/[^\s)]+)\)/g, type: "link" },
-
+      { regex: /\[([^\]]+)]\(((?:https?:\/\/|\/)[^\s)]+)\)/g, type: "link" },
       { regex: /<gradient:([^>]+)>(.*?)<\/gradient>/g, type: "customGradient" },
       { regex: /<gradient>(.*?)<\/gradient>/g, type: "gradient" },
       {
@@ -96,16 +96,28 @@ export function parseText(text) {
 
       switch (match.type) {
         case "link":
-          parts.push(
-            <LinkPreview
-              className="text-white hover:text-violet-400 transition-colors"
-              key={key}
-              url={match[2]}
-              newTab
-            >
-              {match[1]}
-            </LinkPreview>,
-          );
+          if (match[2].startsWith("/")) {
+            parts.push(
+              <Link
+                href={match[2]}
+                key={key}
+                className="text-white underline hover:text-violet-400 transition-colors"
+              >
+                {match[1]}
+              </Link>,
+            );
+          } else {
+            parts.push(
+              <LinkPreview
+                className="text-white hover:text-violet-400 transition-colors"
+                key={key}
+                url={match[2]}
+                newTab
+              >
+                {match[1]}
+              </LinkPreview>,
+            );
+          }
           break;
 
         case "lineBreak":
