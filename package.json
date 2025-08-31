@@ -24,6 +24,7 @@
     "lucide-react": "^0.468.0",
     "motion": "^12.6.3",
     "next": "^15.2.4",
+    "prismjs": "^1.30.0",
     "qss": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",

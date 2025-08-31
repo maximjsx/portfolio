@@ -1,0 +1,391 @@
+{
+  "blog": {
+    "enabled": true,
+    "title": "Blog",
+    "description": "Thoughts, tutorials, and insights from my development journey",
+    "meta_description": "Read my latest blog posts about web development, programming, and tech insights",
+    "posts_per_page": 6,
+    "default_author": {
+      "name": "Maxim",
+      "avatar": "/images/avatar_3.png",
+      "bio": "Full-stack developer passionate about modern web technologies"
+    }
+  },
+  "posts": {
+    "driving-school-guide": {
+      "enabled": true,
+      "hidden": true,
+      "title": "Fahrschule Start07",
+      "slug": "driving-school-guide",
+      "description": "Infos zur Fahrschule Start07 in Burgas für die englische Prüfung, inklusive Anmeldung, Theorie und Praxis.",
+      "excerpt": "Infos für die englische prüfung bei Start07",
+      "published_date": "2025-07-02",
+      "updated_date": "2025-08-20",
+      "tags": ["Führerschein", "Bulgarien", "Fahrschule", "Englische Prüfung"],
+      "category": "Guide",
+      "reading_time": "1 min read",
+      "related_posts": ["theory-exam-guide", "learning-resources", "degree-certification", "first-aid-course"],
+      "content": [
+        {
+          "type": "text",
+          "content": "[https://www.start07.com/bg/kategoriya-b](https://www.start07.com/bg/kategoriya-b)<br><br>Milen Marinov<br>Tel: +359882289000"
+        },
+        {
+          "type": "section",
+          "title": "Adresse",
+          "content": [
+            {
+              "type": "text",
+              "content": "Burgas Center, bul. \"Demokratsia\" 82, 8000 Burgas, Bulgarien<br>[Siehe auf Google Maps](https://maps.app.goo.gl/d6KetymjhSweEGvF8)"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Anmeldung",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "Zur Registrierung die **лична карта** (Personalausweis) mitbringen."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Theorieunterricht",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "Es gab bei mir insgesamt **drei Theoriestunden** in der Fahrschule.",
+                "Die **Theorieprüfung** muss nicht vor den Praxisstunden abgelegt werden, jedoch **vor der praktischen Prüfung**.",
+                "Theorie Lernen [https://avtoizpit.com/](https://avtoizpit.com/) [Mehr info](/blog/learning-resources)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Theorieprüfung",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "Man muss erst test Prüfung in der Fahrschule machen",
+                "Wenn man besteht, bekommt man einen Termin zur offiziellen Prüfung die an einem anderen Ort stattfindet. [Mehr info (Wo genau etc.)](/theory-exam.md)",
+                "Es gibt 45 Fragen und 40 Minuten Zeit"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Praxisstunden",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "Man erhält den Kontakt zum Fahrlehrer für die Praxisstunden.",
+                "Davon gibt es (soweit erinnerlich): 31 Einheiten, jeweils 40 Minuten, normalerweise als Doppelstunden"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Praxisprüfung",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "Dauer wahrscheinlich 25 Minuten",
+                "Mein Fahrlehrer meinte dass nur innerhalb Burgas gefahren wird (nicht auf Landstraßen) weil die Zeit nicht ausreicht",
+                "Man darf maximal 10 Fehlerpunkte machen"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Weitere Voraussetzungen",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "Der **Erste-Hilfe-Kurs** muss ebenfalls vor der praktischen Prüfung absolviert werden (Auf Bulgarisch mit einem Test). -> [Mehr info](/blog/first-aid-course)",
+                "Beglaubigtes Zeugnis/Abschluss -> [Mehr info](/blog/degree-certification)",
+                "Ärztliche Untersuchung, ob man fahrtauglich ist"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "learning-resources": {
+      "enabled": true,
+      "hidden": true,
+      "title": "Lernressourcen für die Theorieprüfung in Bulgarien",
+      "slug": "learning-resources",
+      "description": "Ressourcen zum Lernen für die Theorieprüfung, inklusive Simulationsseiten und offizieller Fragen.",
+      "published_date": "2025-08-20",
+      "updated_date": "2025-08-20",
+      "tags": ["Theorieprüfung", "Lernen", "Bulgarien", "Führerschein"],
+      "category": "Resources",
+      "reading_time": "1 min read",
+      "related_posts": ["driving-school-guide", "theory-exam-guide"],
+      "content": [
+        {
+          "type": "text",
+          "content": "Auf [https://avtoizpit.com/](https://avtoizpit.com/) kann man Prüfungssimulationen machen: 45 zufällige Fragen in 40 Minuten, wie bei der echten Prüfung."
+        },
+        {
+          "type": "text",
+          "content": "Alle offiziellen Fragen, die im Test vorkommen, findet man hier: [https://rta.government.bg/en](https://rta.government.bg/en) mit insgesamt 19 Themen."
+        },
+        {
+          "type": "text",
+          "content": "Da ich keine guten Lernressourcen gefunden habe wo man alle Fragen durchgehen kann (außer die Antwortblätter), habe ich selbst eine Seite erstellt. Dort kann man einige Themen als Quiz durchgehen, nicht mit zufälligen Fragen, sondern mit allen Fragen zu dem jeweiligen Thema:<br>[https://listovki.maxim.cat/topics](https://listovki.maxim.cat/topics)"
+        }
+      ]
+    },
+    "theory-exam-guide": {
+      "enabled": true,
+      "hidden": true,
+      "title": "Theorieprüfung in Bulgarien: Ort und Ablauf",
+      "slug": "theory-exam-guide",
+      "description": "Wo und wie die offizielle Theorieprüfung abläuft.",
+      "published_date": "2025-08-20",
+      "updated_date": "2025-08-20",
+      "tags": ["Theorieprüfung", "Bulgarien", "Führerschein"],
+      "category": "Guide",
+      "reading_time": "1 min read",
+      "related_posts": ["driving-school-guide", "learning-resources"],
+      "content": [
+        {
+          "type": "text",
+          "content": "Nachdem man den Theorietest in der Fahrschule bestanden hat und einen Zettel (Ваучер) sowie einen Termin erhalten hat, muss man zu dieser Adresse gehen, um die Prüfung abzulegen."
+        },
+        {
+          "type": "text",
+          "content": "[Im Gebäude](https://maps.app.goo.gl/X4c9aGa6QUNJDQqb6), Dritte Etage, am Ende des Gangs (dort sollte man ein Bildschirm/e sehen). Warten, bis der Name aufgerufen wird.<br>"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/drive/exam.png",
+          "alt": "Prüfungsort",
+          "caption": "Das Gebäude"
+        },
+        {
+          "type": "image",
+          "src": "/images/blog/drive/exam_loc.png",
+          "alt": "Zusätzliches Bild",
+          "caption": "Prüfungsort auf Maps"
+        },
+        {
+          "type": "section",
+          "title": "Buslinien von Schule zum Prüfungsort",
+          "content": [
+            {
+              "type": "list",
+              "items": [
+                "B12",
+                "B11"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "content": "Bushaltestelle in der Nähe des Prüfungsortes<br>[https://maps.app.goo.gl/EenFbgbX6qWWZ7xA6](https://maps.app.goo.gl/EenFbgbX6qWWZ7xA6)"
+        }
+      ]
+    },
+    "degree-certification": {
+      "enabled": true,
+      "hidden": true,
+      "title": "Beglaubigung des Abschlusszeugnisses in Bulgarien",
+      "slug": "degree-certification",
+      "description": "Wie man sein Abschlusszeugnis beglaubigen lässt für den Führerscheinerwerb.",
+      "published_date": "2025-08-20",
+      "updated_date": "2025-08-20",
+      "tags": ["Beglaubigung", "Abschlusszeugnis", "Bulgarien", "Führerschein"],
+      "category": "Guide",
+      "reading_time": "1 min read",
+      "related_posts": ["driving-school-guide"],
+      "content": [
+{
+          "type": "text",
+          "content": "Hier kann man sein Abschlusszeugnis beglaubigen lassen. Man erhält zunächst einen Zettel, mit der man die beglaubigte Version nach etwa einem Monat abholen kann."
+        },
+          {
+          "type": "section",
+          "title": "Adresse",
+          "content": [
+            {
+              "type": "text",
+              "content": "g.k. Bratya Miladinovi, ul. \"William Gladstone\" № 150, 8001 Burgas<br>[Auf Google Maps](https://maps.app.goo.gl/zemYak9bhTAVENeW8)"
+            },
+            {
+              "type": "image",
+              "src": "/images/blog/drive/degree.png",
+              "alt": "Beglaubigungsstelle",
+              "caption": "Bild vom Gebäude"
+            }
+          ]
+        }
+      ]
+    },
+    "first-aid-course": {
+      "enabled": true,
+      "hidden": true,
+      "title": "Erste-Hilfe-Kurs für Führerschein in Bulgarien",
+      "slug": "first-aid-course",
+      "description": "Alles zum Erste-Hilfe-Kurs.",
+      "published_date": "2025-07-02",
+      "updated_date": "2025-08-20",
+      "tags": ["Erste Hilfe", "Kurs", "Bulgarien", "Führerschein"],
+      "category": "Guide",
+      "reading_time": "5 min read",
+      "related_posts": ["driving-school-guide"],
+      "content": [
+                {
+          "type": "text",
+          "content": "**Der Erste Hilfe Kurs**<br>Курс по първа помощ при пътнотранспортни произшествия"
+        },
+        {
+          "type": "section",
+          "title": "Registrierung",
+          "content": [
+            {
+              "type": "image",
+              "src": "/images/blog/drive/pomosht.png",
+              "alt": "Registrierung",
+              "caption": "Registrierung"
+            },
+            {
+              "type": "text",
+              "content": "[https://firstaid.redcross.bg/home/courseinfo/1](https://firstaid.redcross.bg/home/courseinfo/1)<br> - Област на провеждане на курс<br>   - Бургас<br><br>Kosten: 110лв (2025)<br>Online bezahlen oder Geld in bar mitbringen<br><br>Hier hat man eine Kurs übersicht<br>[https://firstaid.redcross.bg/account/mycourses](https://firstaid.redcross.bg/account/mycourses)"
+            },
+            {
+              "type": "image",
+              "src": "/images/blog/drive/kursove.png",
+              "alt": "Kursübersicht",
+              "caption": "Kursübersicht"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Adresse",
+          "content": [
+            {
+              "type": "text",
+              "content": "гр. Бургас, Ул.Фердинандова № 2А ет.2 - Обучителна зала на БЧК - Бургас, Кабинет 1<br>[Google Maps](https://maps.app.goo.gl/F8eWF3dSvanzjgWw9)<br><br>- Zweite Etage<br>- Raum mit Schild \"Обучителна зала\"<br>- Besser etwas früher kommen um den richtigen Raum zu finden<br>"
+            },
+            {
+              "type": "image",
+              "src": "/images/blog/drive/vhod.png",
+              "alt": "Eingang",
+              "caption": "Der Eingang"
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Ablauf des Kurses",
+          "content": [
+            {
+              "type": "section",
+              "title": "Anmeldung und Identitätsprüfung",
+              "content": [
+                {
+                  "type": "list",
+                  "items": [
+                    "**Лична карта (Personalausweis)** wird überprüft.",
+                    "**Name und Unterschrift** werden erfasst.",
+                    "**Bezahlung**:<br>  * Bei Barzahlung vor Ort direkt.<br>  * Bei Onlinezahlung: Die **ersten 4 und letzten 4 Ziffern der Kreditkarte** werden kontrolliert."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Kursdurchführung",
+              "content": [
+                {
+                  "type": "list",
+                  "items": [
+                    "**Präsentation** erfolgt **auf Bulgarisch**.",
+                    "**Inhalte** werden vollständig **auf Bulgarisch erklärt**.",
+                    "**Praktischer Teil**: Kurze Übung an Puppen zur **Herzdruckmassage**.",
+                    "Es gab **2 Pausen à ca. 10 Minuten**.",
+                    "Die Dauer des Kurses betrug ca. **4 Stunden**, obwohl auf der Website **8 Stunden** angegeben waren."
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "section",
+              "title": "Abschlusstest",
+              "content": [
+                {
+                  "type": "list",
+                  "items": [
+                    "Am Ende erhält man **einen Test mit 15 Fragen** (auf Bulgarisch).",
+                    "**Pro Frage ist nur eine Antwort richtig**.",
+                    "Man kreuzt die Antworten auf einem separaten Zettel mit **а, б, в oder г** an.",
+                    "Zum Bestehen benötigt man **mindestens 12 richtige Antworten** (soweit erinnerlich)."
+                  ]
+                },
+                {
+                  "type": "text",
+                  "content": "**Beispiel Erste-Hilfe-Test**<br>Hier ist ein Beispiel dafür, wie so ein Test ungefähr aussieht:<br>(Viele der Fragen stimmten tatsächlich mit meinem echten Test überein welchen ich gemacht habe.)<br>"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "title": "Beispieltest",
+          "content": [
+            {
+              "type": "text",
+              "content": "[-> Quelle](https://www.scribd.com/document/516485911/%D0%A2%D0%95%D0%A1%D0%A2-%D0%BF%D1%8A%D1%80%D0%B2%D0%B0-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89)<br>"
+            },
+            {
+                "type": "text",
+                "content": "**ТЕСТ „ПЪРВА ПОМОЩ ПРИ ПТП**"
+            },
+            {
+              "type": "list",
+              "items": [
+                "**1. Какава е последователността на действията при оказване на първа помощ при пътен инцидент?**<br>а/ оглед на местопроизшествието, вземане на предпазни мерки, уведомяване на СМП, оказване на първа помощ;<br>б/ уведомяване на СМП, оглед на местопроизшествието, вземане на предпазни мерки, оказване на първа помощ;<br>в/ оглед на местопроизшествието, вземане на предпазни мерки, оказване на първа помощ, уведомяване на СМП.",
+                "**2. Каква е техниката на съживяване при наличието на един спасител?**<br>а/ обдишване и извънгръдно притискане на сърцето в съотношение 1:15;<br>б/ обдишване и извънгръдно притискане на сърцето в съотношение 1:30<br>в/ обдишване и извънгръдно притискане на сърцето в съотношение 1:5.",
+                "**3. Пострадал се поставя в стабилно странично положение, когато:**<br>а/ се намира в безсъзнание, диша и има сърдечна дейност;<br>б/ се намира в съзнание, диша и има сърдечна дейност;<br>в/ се намира в безсъзнание, не диша и няма сърдечна дейност.",
+                "**4. Нормалната сърдечна честота на човека е:**<br>а/ 50-60 удара в минута;<br>б/ 60-100 удара в минута;<br>в/ 50-100 удара в минута.",
+                "**5. Основният метод за отваряне на въздушните пътища при пациент в безсъзнание е:**<br>а/ отвеждане главата назад;<br>б/ избутване на долната челюст нагоре;<br>в/ и двете.",
+                "**6. Виждате човек, който лежи на улицата. Кое е първото действие, което трябва да направите?**<br>а/ проверка степента на съзнание, пулс и дишане;<br>б/ повдигане на крайниците;<br>в/ обаждане на СМП.",
+                "**7. Целта на поставяне на пострадал в шокова поза е:**<br>а/ да се преустанови вътрешното кръвотечение, предизвикало шока;<br>б/ да се извърши преразпределение на кръвта към жизнено важни органи и системи;<br>в/ да не повръща пострадалия.",
+                "**8. Първият симптом, който ни кара да мислим за травма на главата, е:**<br>а/ учестено дишане и ускорен пулс;<br>б/ промяна в степента на съзнанието;<br>в/ забавено дишане и ускорен пулс.",
+                "**9. Когато правите изкуствено дишане и сърдечен масаж на пострадал възрастен човек, пулсът се проверява на:**<br>а/ шията – каротидната артерия;<br>б/ китката на ръката – радиалната артерия;<br>в/ няма значение на коя артерия.",
+                "**10. При извънгръдно притискане на сърцето, честотата в една минута е:**<br>а/ от 40 до 60 тласъка;<br>б/ от 60 до 80 тласъка;<br>в/ от 80 до 100 тласъка.",
+                "**11. Признаците на шок в резултат на кръвозагуба са:**<br>а/ бледа, студена и влажна кожа, ускорен пулс и дишане;<br>б/ зачервена и суха кожа, бавен пулс и дишане;<br>в/ изпотена и зачервена кожа, ускорен пулс и повърхностно дишане.",
+                "**12. При счупване на горната част на бедрото обездвижването включва:**<br>а/ мястото на счупването и една съседна става;<br>б/ мястото на счупването и две съседни стави;<br>в/ обездвижва се целият крайник – от подмишницата до стъпалото.",
+                "**13. При артериално кръвотечение от ръката, същата се поставя:**<br>а/ на нивото на сърцето;<br>б/ под нивото на сърцето;<br>в/ над нивото на сърцето.",
+                "**14. Как трябва да се реагира при кръвотечение от носа?**<br>а/ пострадалият трябва да легне по гръб и да се постави памук или марля в ноздрите му;<br>б/ пострадалият трябва да седне, главата му се навежда напред, а помагащият с два пръста на едната си ръка притисне двете му ноздри;<br>в/ пострадалият трябва да седне и после се поставя главата на назад, след което се поставя памук или марля в ноздрите му.",
+                "**15. Ако имате пострадал със следните симптоми: нарушено ниво на съзнание, кръвна изтичане от ухото и носа, синина около очите и неравномерно дишане, най-вероятно се касае за:**<br>а/ нараняване на коремни органи;<br>б/ счупване на основата на черепа;<br>в/ вътречерепно кръвонасядане."
+              ]
+            },
+            {
+                "type": "text",
+                "content": "Am besten noch dieses Video vorher anschauen<br>[https://www.youtube.com/watch?v=oBRVoHHUyOU](https://www.youtube.com/watch?v=oBRVoHHUyOU)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
